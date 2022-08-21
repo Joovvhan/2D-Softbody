@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jelly : MonoBehaviour
+public class Dummy : MonoBehaviour
 {
 
     [SerializeField, Tooltip("Center Player")]
@@ -17,19 +17,21 @@ public class Jelly : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //int i = 0;
+        //i += 1;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void FixedUpdate()
+    {
+        int i = 0;
+        i += 1;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
             player.GetComponent<Player>().grounded = true;
         }
-    }
-
-    public void SetPlayer(GameObject _player)
-    {
-        player = _player;
     }
 }

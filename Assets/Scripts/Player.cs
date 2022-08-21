@@ -50,23 +50,25 @@ public class Player : MonoBehaviour
         // Use GetAxisRaw to ensure our input is either 0, 1 or -1.
         float moveInput = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && grounded)
-        // if (Input.GetButtonDown("Jump"))
+        //if (Input.GetButtonDown("Jump") && grounded)
+        //// if (Input.GetButtonDown("Jump"))
+        //{
+        //    // Calculate the velocity required to achieve the target jump height.
+        //    velocity.y = Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y));
+        //}
+
+        velocity.y = rb.velocity.y;
+
+        if (grounded)
         {
-            // Calculate the velocity required to achieve the target jump height.
-            velocity.y = Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y));
+            //velocity.y = 0;
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                // Calculate the velocity required to achieve the target jump height.
+                velocity.y = Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y));
+            }
         }
-
-        // if (grounded)
-        // {
-        //     velocity.y = 0;
-
-        //     if (Input.GetButtonDown("Jump"))
-        //     {
-        //         // Calculate the velocity required to achieve the target jump height.
-        //         velocity.y = Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y));
-        //     }
-        // }
 
         // float acceleration = grounded ? walkAcceleration : airAcceleration;
         // float deceleration = grounded ? groundDeceleration : 0;
@@ -80,9 +82,9 @@ public class Player : MonoBehaviour
             velocity.x = Mathf.MoveTowards(velocity.x, 0, deceleration * Time.deltaTime);
         }
 
-        velocity.y += Physics2D.gravity.y * Time.deltaTime;
+        //velocity.y += Physics2D.gravity.y * Time.deltaTime;
 
-        velocity.y = grounded && velocity.y < 0 ? 0 : velocity.y;
+        //velocity.y = grounded && velocity.y < 0 ? 0 : velocity.y;
 
         // velocity.y = 0;
 
