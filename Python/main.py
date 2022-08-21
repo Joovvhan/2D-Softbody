@@ -21,6 +21,7 @@ if __name__ == "__main__":
         plt.scatter(vertices[:, 0], vertices[:, 1])
         plt.scatter(new_vertices[:, 0], new_vertices[:, 1])
         DrawOffsetVectors(vertices, new_vertices)
+        plt.axis('square')
         plt.show()
         
         dense_vertices = IncreaseVertices(new_vertices, 5)
@@ -34,5 +35,6 @@ if __name__ == "__main__":
         plt.plot(sparse_vertices[0, 0], sparse_vertices[0, 1], '*', color='r', markersize=16)
         plt.plot(sparse_vertices[-1, 0], sparse_vertices[-1, 1], '*', color='b', markersize=16)
         DrawOffsetCircles(sparse_vertices, r)
+        plt.axis('square')
         plt.show()
         
