@@ -69,6 +69,11 @@ public class RiggingEditor : Editor
             autoRigging.DebugSpriteVetrices();
         }
 
+        if (GUILayout.Button("Debug Sprite Edges"))
+        {
+            autoRigging.DebugSpriteEdges();
+        }
+
         if (GUILayout.Button("Debug Sprite Triangles"))
         {
             autoRigging.DebugSpriteTriangles();
