@@ -25,6 +25,11 @@ public class Jelly : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             player.GetComponent<Player>().grounded = true;
+            foreach (ContactPoint2D contact in collision.contacts)
+            {
+                player.GetComponent<Player>().QueueNormalVector(contact.normal);
+                Debug.DrawRay(contact.point, contact.normal, Color.blue);
+            }
         }
     }
 

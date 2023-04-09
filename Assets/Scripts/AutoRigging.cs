@@ -252,6 +252,7 @@ public class AutoRigging : MonoBehaviour
         //}
 
         float r = 0.15f;
+        //float r = 0.30f;
 
         List<Vector2> validVertices = GetValidVertices();
         //List<Vector2> new_vertices = OffsetVertices(validVertices, r);

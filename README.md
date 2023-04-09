@@ -9,6 +9,9 @@
 
 <img src="https://github.com/Joovvhan/2D-Softbody/blob/master/Assets/Gifs/jiggle_family.gif"/> 
 
+<img src="https://github.com/Joovvhan/2D-Softbody/blob/master/Assets/Gifs/flipper.gif"/> 
+
+
 ----
 
 # TO-DO
@@ -32,4 +35,6 @@
 <img src="https://github.com/Joovvhan/2D-Softbody/blob/master/Assets/Sprites/cheese.png" width="64"/> <a href="https://www.flaticon.com/free-icons/cheese" title="cheese icons">Cheese icons created by Freepik - Flaticon</a>
 
 <img src="https://github.com/Joovvhan/2D-Softbody/blob/master/Assets/Sprites/jelly.png" width="64"/> <a href="https://www.flaticon.com/free-icons/sugar" title="sugar icons">Sugar icons created by Freepik - Flaticon</a>
+
+<img src="https://github.com/Joovvhan/2D-Softbody/blob/master/Assets/Sprites/spatula.png" width="64"/> <a href="https://www.flaticon.com/free-icons/spatula" title="spatula icons">Spatula icons created by Freepik - Flaticon</a>
 
